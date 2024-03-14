@@ -1,0 +1,48 @@
+{
+  "name": "@fethcat/store",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint \"{src,tests}/**/*.ts\"",
+    "format": "prettier -w \"{src,tests}/**/*.ts\"",
+    "test:unit": "vitest run --coverage",
+    "version:patch": "version patch",
+    "version:minor": "version minor",
+    "version:major": "version major"
+  },
+  "bin": {
+    "version": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fethca/store.git"
+  },
+  "devDependencies": {
+    "@fethcat/eslint-plugin": "^0.0.2",
+    "@fethcat/prettier-config": "^1.0.4",
+    "@fethcat/tests": "^0.0.8",
+    "@fethcat/version": "^0.0.6",
+    "@types/node": "^20.11.25",
+    "dotenv": "^16.4.5",
+    "mockdate": "^3.0.5",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "ioredis": "^5.3.2"
+  },
+  "prettier": "@fethcat/prettier-config",
+  "eslintConfig": {
+    "extends": [
+      "plugin:@fethcat/back"
+    ]
+  }
+}
