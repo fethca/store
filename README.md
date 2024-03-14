@@ -5,13 +5,13 @@
 Install package:
 
 ```bash
-yarn add pdi-store
+yarn add @fethcat/store
 ```
 
 Use module:
 
 ```typescript
-import { Store } from 'pdi-store'
+import { Store } from '@fethcat/store'
 
 export const redisStore = new Store()
 
