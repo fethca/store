@@ -1,0 +1,9 @@
+dist/
+node_modules/
+coverage/
+.idea
+yarn-error.log
+logs/
+.groovylintrc.json
+.history
+.npmrc
