@@ -19,7 +19,9 @@ describe('Store', () => {
     }
 
     beforeEach(() => {
-      vi.mocked(Redis).mockImplementation(() => redisInstance as never)
+      vi.mocked(Redis).mockImplementation(function () {
+        return redisInstance as never
+      })
     })
 
     it('should get keys from redis server', async () => {
