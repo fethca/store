@@ -40,7 +40,7 @@ export class Store {
   }
 
   async incr(key: string, time = 3600): Promise<number> {
-    let count = 0
+    let count: number
     if (this.redisInstance) {
       count = await this.redisInstance.incr(key).catch(() => this.incrLocal(key))
     } else {
